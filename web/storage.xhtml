@@ -1,0 +1,22 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Simlpe TODO List (Application in JSF 2)</title>
+    </h:head>
+    <h:body>
+        <h3>Simlpe TODO List</h3>
+        
+        <!--#{userLogin.message}<br/><br/>-->
+        #{userLogin.username}<br/><br/>
+        
+        #{storage.errMsg}<br/><br/>
+
+        
+        <h:form id="login_ok">
+            <h:inputTextarea  rows = "10" cols = "100" value = "#{storage.data}"/><br/>
+            
+            <h:commandButton value="Save" action="#{storage.save}"/>
+        </h:form>
+    </h:body>
+</html> 
